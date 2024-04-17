@@ -67,6 +67,3 @@ jobs:
       - name: Deploy
         run: |
           npm run deploy
-      - name: delete branch
-        run: |
-          git push git@github.com:Zero-Ice/bitcoin-order-app.git :master

@@ -1,12 +1,11 @@
-name: Bitcoin order App
+name: "Bitcoin order App"
+
 on:
-  push:
-    branches:
-      - githubcicd
   workflow_run:
-    workflows: [sast-scan, linting-tool-scan]
+    workflows: ["linting-tool-scan", "sast-scan"]
     types:
       - completed
+
 jobs:
   ci:
     runs-on: ubuntu-latest

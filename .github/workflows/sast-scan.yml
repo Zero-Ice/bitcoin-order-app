@@ -1,8 +1,6 @@
 name: "sast-scan"
 
-on:
-  push:
-    branches: [githubcicd]
+on: [push]
 
 jobs:
   test:

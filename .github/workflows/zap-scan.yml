@@ -3,7 +3,10 @@ name: "owasp-scan"
 on:
   push:
     branches: [githubcicd]
-
+  workflow_run:
+    workflows: [Bitcoin order App]
+    types:
+      - completed
 jobs:
   test:
     runs-on: ubuntu-latest

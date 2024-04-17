@@ -3,6 +3,10 @@ on:
   push:
     branches:
       - githubcicd
+  workflow_run:
+    workflows: [sast-scan, linting-tool-scan]
+    types:
+      - completed
 jobs:
   ci:
     runs-on: ubuntu-latest
